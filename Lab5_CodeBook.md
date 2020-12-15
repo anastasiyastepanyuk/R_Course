@@ -25,7 +25,7 @@ colnames (data)<-c("SubjectID", "Activity", cnames_t_f)
 
 ```R
 mean_std<-data[ , grep("-mean\\(\\)|-std\\(\\)", colnames(data))]
-mean_std<-cbind(data, data$Activity, mean_std)
+mean_std<-cbind(data$SubjectID, data$Activity, mean_std)
 colnames(mean_std)[1:2]<-c("SubjectID", "Activity")
 ```
 
