@@ -51,5 +51,4 @@ colnames(mean_std) <- gsub("Mag", "Magnitude", colnames(mean_std))
 
 ```R
 means<-aggregate(.~SubjectID+ActivityName, mean_std, mean)
-means$Activity<-NULL
 ```
