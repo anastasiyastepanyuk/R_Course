@@ -42,8 +42,7 @@ http://d396qusza40orc.cloudfront.net/getdata%2Fdata%2Frestaurants.xml
 ```R
 library(XML)
 xmlURL <- 'http://d396qusza40orc.cloudfront.net/getdata%2Fdata%2Frestaurants.xml'
-doc <- xmlTreeParse(restURL, useInternal=TRUE)
-rest <- xmlRoot(doc)
+doc <- xmlTreeParse(xmlURL, useInternal=TRUE)
 zipcode <- xpathSApply(doc, "//zipcode", xmlValue)
 
 length(which(zipcode==21231))                                                                                                                         
