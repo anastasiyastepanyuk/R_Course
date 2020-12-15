@@ -62,6 +62,8 @@ dbDisconnect(con)
 с типом виступу Spotlight. Сортування по назві статті.
 
 ```R
+library(DBI)
+library(RSQLite)
 conn <- dbConnect(RSQLite::SQLite(), "database.sqlite")
 res <- dbSendQuery(conn, "SELECT Title, EventType FROM Papers WHERE EventType = 'Spotlight' ORDER BY Title")
 df <- dbFetch(res, n=10)
